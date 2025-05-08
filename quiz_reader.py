@@ -57,4 +57,14 @@ def run_quiz():
         print(f"C. {q['C']}")
         print(f"D. {q['D']}")
 
+        answer = input(f"{MAGENTA}Your answer (A/B/C/D): ").strip().upper()
+
+        if answer == q["correct"]:
+            print(f"{GREEN}Correct!")
+            score += 1
+        else:
+            print(f"{RED}Incorrect! The correct answer was {q['correct']}.")
+
+    print(f"\n{BOLD}{YELLOW}Quiz completed! Your score: {score}/{len(questions)}{RESET}")
+
 # Run the quiz
