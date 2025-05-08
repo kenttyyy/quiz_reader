@@ -28,5 +28,23 @@ def load_questions(filename):
             choice_d = lines[i+4][len("D. "):]
             correct = lines[i+5][len("Correct Answer: "):].upper()
 
+            questions.append({
+                "question": question_text,
+                "A": choice_a,
+                "B": choice_b,
+                "C": choice_c,
+                "D": choice_d,
+                "correct": correct})
+            i += 6
+        else:
+            i += 1
+    return questions
+
 # Main program logic
+def run_quiz():
+    questions = load_questions("quiz_questions.txt")
+    if not questions:
+        print(f"{RED}No questions found. Please add questions using the Quiz Creator.")
+        return
+
 # Run the quiz
