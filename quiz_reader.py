@@ -68,3 +68,4 @@ def run_quiz():
     print(f"\n{BOLD}{YELLOW}Quiz completed! Your score: {score}/{len(questions)}{RESET}")
 
 # Run the quiz
+run_quiz()
