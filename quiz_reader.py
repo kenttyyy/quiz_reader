@@ -47,4 +47,14 @@ def run_quiz():
         print(f"{RED}No questions found. Please add questions using the Quiz Creator.")
         return
 
+    random.shuffle(questions)
+    score = 0
+
+    for i, q in enumerate(questions, 1):
+        print(f"\n{BOLD}{CYAN}Question {i}: {q['question']}")
+        print(f"A. {q['A']}")
+        print(f"B. {q['B']}")
+        print(f"C. {q['C']}")
+        print(f"D. {q['D']}")
+
 # Run the quiz
